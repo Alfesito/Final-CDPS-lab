@@ -78,5 +78,5 @@ with open("./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py
 """
 
 # Ejecutar la aplicación especificando el puerto deseado
-port = 8080  # Especificar el puerto deseado aquí
+port = 9080  # Especificar el puerto deseado aquí
 subprocess.check_call(["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", str(port)])
