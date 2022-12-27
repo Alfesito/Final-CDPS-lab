@@ -12,7 +12,7 @@ os.system('sudo apt-get update')
 os.system('sudo apt-get -y upgrade')
 
 # Instalamos Python y pip
-os.system('sudo apt-get -y install python3')
+os.system('sudo apt-get -y install python3.9')
 os.system('sudo apt-get -y install python3-pip')
 
 # Instalamos git y clonamos el repositorio de la practica
@@ -31,7 +31,7 @@ fin.write("Flasks\n")
 fin.write("Flask-Bootstrap\n")
 fin.write("Flask-JSON\n")
 fin.write("future\n")
-#fin.write("futures\n")
+fin.write("futures\n")
 fin.write("gevent\n")
 fin.write("greenlet\n")
 fin.write("idna\n")
