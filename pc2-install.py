@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+# Grupo 40:
+#   - Ana Clara Pérez Acosta
+#   - Andrés Alfaro Fernández 
+#   - Fernando Castell Miñón
+
 import os
 import subprocess
 
