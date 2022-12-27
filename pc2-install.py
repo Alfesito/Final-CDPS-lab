@@ -68,7 +68,8 @@ os.system('pip install json2html')
 os.system('pip install Flash')
 
 # Modificar el código de la aplicación para que en el título aparezca el nombre del grupo. que hay que cambiar?
-group_number = os.environ["GRUPO 40"]
+os.environ['GROUP_NUMBER'] = "Grupo 40"
+group_number = os.environ['GROUP_NUMBER']
 with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "r") as f:
     code = f.read()
 code = code.replace("Simple Bookstore App", group_number)
