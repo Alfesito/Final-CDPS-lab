@@ -12,8 +12,8 @@ os.system('sudo apt-get update')
 os.system('sudo apt-get -y upgrade')
 
 # Instalamos Python y pip
-os.system('sudo apt-get -y install python3')
-os.system('sudo apt-get -y install python3-pip')
+os.system('sudo apt-get -y install python3.8')
+os.system('sudo apt-get -y install python3.8-pip')
 
 # Instalamos git y clonamos el repositorio de la practica
 os.system('sudo apt install git')
