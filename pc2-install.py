@@ -5,19 +5,16 @@ import subprocess
 os.system('sudo apt-get update')
 os.system('sudo apt-get -y upgrade')
 
-# Verificar que Python y pip están instalados
-assert "python" in os.listdir("/usr/bin")
-assert "pip" in os.listdir("/usr/bin")
 # Instalamos Python y pip
-os.system('sudo apt-get -y install python3')
-os.system('sudo apt-get -y install python3-pip')
+os.system('sudo apt-get -y install python3.9')
+os.system('sudo apt-get -y install python3.9-pip')
 
 # Instalamos git y clonamos el repositorio de la practica
 os.system('sudo apt install git')
 os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2')
 
 # Instalar las dependencias especificadas en requirements.txt
-subprocess.check_call(["pip", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
+subprocess.check_call(["pip3", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
 
 # Modificar el código de la aplicación para que en el título aparezca el nombre del grupo. que hay que cambiar?
 """
