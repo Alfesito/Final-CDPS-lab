@@ -6,8 +6,8 @@ os.system('sudo apt-get update')
 os.system('sudo apt-get -y upgrade')
 
 # Instalamos Python y pip
-os.system('sudo apt-get -y install python3.9')
-os.system('sudo apt-get -y install python3.9-pip')
+os.system('sudo apt-get -y install python3')
+os.system('sudo apt-get -y install python3-pip')
 
 # Instalamos git y clonamos el repositorio de la practica
 os.system('sudo apt install git')
@@ -73,4 +73,4 @@ with open("./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py
 
 # Ejecutar la aplicación especificando el puerto deseado
 port = 8080  # Especificar el puerto deseado aquí
-subprocess.check_call(["python", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", str(port)])
+subprocess.check_call(["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", str(port)])
