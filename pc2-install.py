@@ -54,9 +54,9 @@ fin.write("visitor\n")
 fin.write("Werkzeug\n")
 fin.write("wrapt\n")
 fin.close()
-# Instalar las dependencias especificadas en requirements.txt
-subprocess.check_call(["pip", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
+
 # Instalamos las librerias que dan problemas
+os.system('pip install futures')
 os.system('pip install urllib3')
 os.system('pip install visitor')
 os.system('pip install wrapt')
@@ -66,6 +66,8 @@ os.system('pip install jaeger-client')
 os.system('pip install opentracing-instrumentation')
 os.system('pip install json2html')
 os.system('pip install Flash')
+# Instalar las dependencias especificadas en requirements.txt
+subprocess.check_call(["pip", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
 
 # Modificar el código de la aplicación para que en el título aparezca el nombre del grupo. que hay que cambiar?
 os.environ['GROUP_NUMBER'] = "Grupo 40"
