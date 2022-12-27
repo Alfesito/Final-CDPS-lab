@@ -14,6 +14,10 @@ os.system('sudo apt-get -y upgrade')
 # Instalamos Python y pip
 os.system('sudo apt-get -y install python3.8')
 os.system('sudo apt-get -y install python3-pip')
+os.system('pip install --upgrade pip')
+os.system('pip install --upgrade wheel')
+os.system('pip install --upgrade setuptools')
+os.system('pip install --upgrade  requests')
 
 # Instalamos git y clonamos el repositorio de la practica
 os.system('sudo apt install git')
@@ -65,6 +69,7 @@ os.system('pip install jaeger-client')
 os.system('pip install opentracing-instrumentation')
 os.system('pip install json2html')
 os.system('pip install Flash')
+
 # Instalar las dependencias especificadas en requirements.txt
 subprocess.check_call(["pip", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
 
