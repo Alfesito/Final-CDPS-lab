@@ -15,7 +15,7 @@ import logging
 from lxml import etree
 
 #Lista de nombre para los servidores
-servers_name=["c1","lb","s1","s2","s3","s4","s5"]
+servers_name=["c1","lb","s1","s2","s3"]
 vms=list()
 
 #Verifica cuantos servidores hay que crear
@@ -33,10 +33,6 @@ def readJSON_server():
                     return 2
                 elif "3" in line:
                     return 3
-                elif "4" in line:
-                    return 4
-                elif "5" in line:
-                    return 5
                 else:
                     logger.debug("Por defecto, asignamos dos servidores")
                     return 2
@@ -151,7 +147,7 @@ def create():
 
         # Creamos un fichero index.html para identificar el servidor del servicio Apache2
         logger.debug('Configuración de los ficheros index.html para '+i)
-        if i == "s1" or i == "s2" or i == "s3" or i == "s4" or i == "s5":
+        if i == "s1" or i == "s2" or i == "s3":
             os.system("echo '<html><h1>"+i+"</h1></html>' > index.html")
             os.system("sudo virt-copy-in -a "+i+".qcow2 ./index.html /var/www/html/") 
 
@@ -236,24 +232,6 @@ def create():
             fout.write("\nauto eth0\n")
             fout.write("iface eth0 inet static\n")
             fout.write("\taddress 10.0.2.103\n")
-            fout.write("\tnetmask 255.255.255.0\n")
-            fout.write("\tgateway 10.20.2.1\n")
-            fout.write("\tdns-nameservers 10.20.2.1\n")
-        elif i == "s4":
-            fout.write("auto lo\n")
-            fout.write("iface lo inet loopback\n")
-            fout.write("\nauto eth0\n")
-            fout.write("iface eth0 inet static \n")
-            fout.write("\taddress 10.0.2.104\n")
-            fout.write("\tnetmask 255.255.255.0\n")
-            fout.write("\tgateway 10.20.2.1\n")
-            fout.write("\tdns-nameservers 10.20.2.1\n")
-        elif i == "s5":
-            fout.write("auto lo\n")
-            fout.write("iface lo inet loopback\n")
-            fout.write("\nauto eth0\n")
-            fout.write("iface eth0 inet static\n")
-            fout.write("\taddress 10.0.2.105\n")
             fout.write("\tnetmask 255.255.255.0\n")
             fout.write("\tgateway 10.20.2.1\n")
             fout.write("\tdns-nameservers 10.20.2.1\n")
