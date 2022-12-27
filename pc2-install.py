@@ -8,8 +8,8 @@ import os
 import subprocess
 
 # Actualizamos el sistema
-#os.system('sudo apt-get update')
-#os.system('sudo apt-get -y upgrade')
+os.system('sudo apt-get update')
+os.system('sudo apt-get -y upgrade')
 
 # Instalamos Python y pip
 os.system('sudo apt-get -y install python3.8')
