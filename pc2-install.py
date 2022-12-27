@@ -68,14 +68,13 @@ os.system('pip install json2html')
 os.system('pip install Flash')
 
 # Modificar el código de la aplicación para que en el título aparezca el nombre del grupo. que hay que cambiar?
-"""
 group_number = os.environ["GRUPO 40"]
-with open("./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "r") as f:
+with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "r") as f:
     code = f.read()
-code = code.replace("<GROUP_NUMBER>", group_number)
-with open("./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "w") as f:
+code = code.replace("Simple Bookstore App", group_number)
+with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "w") as f:
     f.write(code)
-"""
+
 
 # Ejecutar la aplicación especificando el puerto deseado
 port = 8080  # Especificar el puerto deseado aquí
