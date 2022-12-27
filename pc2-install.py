@@ -12,7 +12,8 @@ assert "pip" in os.listdir("/usr/bin")
 os.system('sudo apt-get -y install python3')
 os.system('sudo apt-get -y install python3-pip')
 
-# Clonamos el reppositorio de la practica
+# Instalamos git y clonamos el repositorio de la practica
+os.system('sudo apt install git')
 os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2')
 
 # Instalar las dependencias especificadas en requirements.txt
