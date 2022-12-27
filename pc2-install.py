@@ -14,7 +14,7 @@ os.system('sudo apt install git')
 os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2')
 
 # Instalar las dependencias especificadas en requirements.txt
-subprocess.check_call(["pip3", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
+subprocess.check_call(["pip", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
 
 # Modificar el código de la aplicación para que en el título aparezca el nombre del grupo. que hay que cambiar?
 """
