@@ -11,7 +11,7 @@ import subprocess
 port = 8080
 
 # Actualizamos el sistema
-os.system('sudo apt-get update')
+os.system('sudo apt-get -y update')
 os.system('sudo apt-get -y upgrade')
 
 os.system('sudo ufw enable')
@@ -21,7 +21,7 @@ os.system('sudo apt-get -y install python3.9') #las versiones 3.8 y 3.9 son esta
 os.system('sudo apt-get -y install python3-pip')
 
 # Instalamos git y clonamos el repositorio de la practica
-os.system('sudo apt install git')
+os.system('sudo apt-get -y install git')
 os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2')
 
 # Instalar las dependencias especificadas en requirements.txt
