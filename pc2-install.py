@@ -7,10 +7,15 @@
 import os
 import subprocess
 
+# Puerto del servicio
+port = 8080
+
 # Actualizamos el sistema
 os.system('sudo apt-get update')
 os.system('sudo apt-get -y upgrade')
 
+os.system('sudo ufw enable')
+os.system('sudo ufw allow +str(port)+/tcp')
 # Instalamos Python y pip
 os.system('sudo apt-get -y install python3.9') #las versiones 3.8 y 3.9 son estables
 os.system('sudo apt-get -y install python3-pip')
@@ -36,7 +41,5 @@ code = code.replace("Simple Bookstore App", group_number)
 with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "w") as f:
     f.write(code)
 
-
 # Ejecutar la aplicación especificando el puerto deseado
-port = 8080  # Especificar el puerto deseado aquí
 subprocess.check_call(["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", str(port)])
