@@ -16,7 +16,7 @@ os.system('sudo apt-get -y install python3.8')
 os.system('sudo apt-get -y install python3-pip')
 
 # Instalamos git y clonamos el repositorio de la practica
-os.system('sudo apt install git')
+os.system('sudo apt -y install git')
 os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2')
 
 # Modificamos el archivo requirements.txt con las versiones actualizadas
