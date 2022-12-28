@@ -26,19 +26,31 @@ os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2')
 
 # Instalar las dependencias especificadas en requirements.txt
 subprocess.check_call(["pip", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
-# Instalamos las librerias que dan problemas
+# Instalamos las librerias que dan problemas de versiones
 os.system('pip install urllib3')#
 os.system('pip install flask_bootstrap')#
 os.system('pip install jaeger-client')#
 os.system('pip install opentracing-instrumentation')#
 
-# Modificar el código de la aplicación para que en el título aparezca el nombre del grupo. que hay que cambiar?
+# Modificar el código de la aplicación para que en el título aparezca el nombre del grupo.
 os.environ['GROUP_NUMBER'] = "Grupo 40"
 group_number = os.environ['GROUP_NUMBER']
+# Para index.html
 with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "r") as f:
     code = f.read()
 code = code.replace("Simple Bookstore App", group_number)
 with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "w") as f:
+    f.write(code)
+# Para productpage.html
+with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "r") as f:
+    code = f.read()
+code = code.replace("Simple Bookstore App", group_number)
+with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "w") as f:
+    f.write(code)
+with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "r") as f:
+    code = f.read()
+code = code.replace("Simple Bookstore App", group_number)
+with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "w") as f:
     f.write(code)
 
 # Ejecutar la aplicación especificando el puerto deseado
