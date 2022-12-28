@@ -14,6 +14,7 @@ port = 8080
 os.system('sudo apt-get -y update')
 os.system('sudo apt-get -y upgrade')
 
+# Habilitamos el FW y el puerto donde queremos desplegar nuestro servicio
 os.system('sudo ufw enable')
 os.system('sudo ufw allow '+str(port)+'/tcp')
 # Instalamos Python y pip
