@@ -8,11 +8,11 @@ import os
 import subprocess
 
 # Actualizamos el sistema
-#os.system('sudo apt-get update')
-#os.system('sudo apt-get -y upgrade')
+os.system('sudo apt-get update')
+os.system('sudo apt-get -y upgrade')
 
 # Instalamos Python y pip
-#os.system('sudo apt-get -y install python3.8')
+#os.system('sudo apt-get -y install python3.8') #las versiones 3.8 y 3.9 son estables
 os.system('sudo apt-get -y install python3-pip')
 
 # Instalamos git y clonamos el repositorio de la practica
