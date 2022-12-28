@@ -15,7 +15,7 @@ os.system('sudo apt-get -y update')
 os.system('sudo apt-get -y upgrade')
 
 os.system('sudo ufw enable')
-os.system('sudo ufw allow +str(port)+/tcp')
+os.system('sudo ufw allow '+str(port)+'/tcp')
 # Instalamos Python y pip
 os.system('sudo apt-get -y install python3.9') #las versiones 3.8 y 3.9 son estables
 os.system('sudo apt-get -y install python3-pip')
@@ -42,11 +42,6 @@ code = code.replace("Simple Bookstore App", group_number)
 with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "w") as f:
     f.write(code)
 # Para productpage.html
-with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "r") as f:
-    code = f.read()
-code = code.replace("Simple Bookstore App", group_number)
-with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "w") as f:
-    f.write(code)
 with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "r") as f:
     code = f.read()
 code = code.replace("Simple Bookstore App", group_number)
