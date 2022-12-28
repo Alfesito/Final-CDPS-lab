@@ -12,13 +12,13 @@ import subprocess
 #os.system('sudo apt-get -y upgrade')
 
 # Instalamos Python y pip
-os.system('sudo apt-get -y install python3')
+os.system('sudo apt-get -y install python3.9')
 os.system('sudo apt-get -y install python3-pip')
 
 # Instalamos git y clonamos el repositorio de la practica
 os.system('sudo apt-get -y install git')
 os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2')
-
+'''
 # Modificamos el archivo requirements.txt debido a problemas entre versiones
 fin = open ("./practica_creativa2/bookinfo/src/productpage/requirements.txt","w+")
 for line in fin:
@@ -27,7 +27,7 @@ for line in fin:
     if line == "urllib3==1.26.5":
         fin.write("urllib3\n")
 fin.close()
-
+'''
 # Instalar las dependencias especificadas en requirements.txt
 subprocess.check_call(["pip", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
 
