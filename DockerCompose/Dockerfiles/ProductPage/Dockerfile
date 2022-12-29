@@ -16,11 +16,11 @@ RUN pip3 install jaeger-client
 RUN pip3 install opentracing-instrumentation
 RUN pip3 install -r ./practica_creativa2/bookinfo/src/productpage/requirements.txt
 
-# Exponemos el puerto 9080
-EXPOSE 9080
+# Exponemos el puerto
+EXPOSE 8080
 
 # Ejecutamos el archivo productpage.py al iniciar el contenedor
-CMD ["python", "./practica_creativa2/bookinfo/src/productpage/productpage.py", "9080"]
+CMD ["python", "./practica_creativa2/bookinfo/src/productpage/productpage.py", "8080"]
 
 # Comando para construir la imagen de productpage:
     # $docker build -t g40/productpage .

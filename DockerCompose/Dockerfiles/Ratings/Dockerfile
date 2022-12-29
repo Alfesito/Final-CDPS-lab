@@ -2,8 +2,8 @@ FROM node:12.18.1-slim
 
 # Creamos el directorio /opt/microservices/ratings y copiamos los ficheros necesarios al contenedor
 RUN mkdir -p /opt/microservices/ratings
-COPY src/package.json /opt/microservices/ratings/
-COPY src/ratings.js /opt/microservices/ratings/
+COPY package.json /opt/microservices/ratings/
+COPY ratings.js /opt/microservices/ratings/
 
 # Variable de entorno
 ENV SERVICE_VERSION=v1
