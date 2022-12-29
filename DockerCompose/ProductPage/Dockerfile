@@ -16,7 +16,7 @@ RUN pip3 install jaeger-client
 RUN pip3 install opentracing-instrumentation
 RUN pip3 install -r ./practica_creativa2/bookinfo/src/productpage/requirements.txt
 
-# Exponemos el puerto 8080
+# Exponemos el puerto 9080
 EXPOSE 9080
 
 # Ejecutamos el archivo productpage.py al iniciar el contenedor

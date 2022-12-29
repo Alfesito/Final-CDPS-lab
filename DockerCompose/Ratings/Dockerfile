@@ -11,7 +11,7 @@ ENV SERVICE_VERSION=v1
 # Instalamos las dependencias necesarias
 RUN cd /opt/microservices/ratings && npm install
 
-# Exponemos el puerto 8080
+# Exponemos el puerto 9080
 EXPOSE 9080
 
 # Ejecutamos el fichero app.js al iniciar el contenedor
