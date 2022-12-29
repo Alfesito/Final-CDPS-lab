@@ -14,12 +14,12 @@ port = 8080
 os.system('sudo apt-get -y update')
 os.system('sudo apt-get -y upgrade')
 
-# Habilitamos el FW y el puerto donde queremos desplegar nuestro servicio
 os.system('sudo ufw enable')
 os.system('sudo ufw allow '+str(port)+'/tcp')
+os.system('sudo ufw allow 9080/tcp')
 
 # Instalamos Python y pip
-#os.system('sudo apt-get -y install python3.9') #las versiones 3.8 y 3.9 son estables
+#os.system('sudo apt-get -y install python3.8')
 os.system('sudo apt-get -y install python3-pip')
 
 # Instalamos git y clonamos el repositorio de la practica
@@ -35,7 +35,7 @@ os.system('pip install jaeger-client')#
 os.system('pip install opentracing-instrumentation')#
 
 # Modificar el código de la aplicación para que en el título aparezca el nombre del grupo.
-os.environ['GROUP_NUMBER'] = "Grupo 40"
+os.environ['GROUP_NUMBER'] = 40
 group_number = os.environ['GROUP_NUMBER']
 # Para index.html
 with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "r") as f:
