@@ -14,9 +14,9 @@ port = 8080
 os.system('sudo apt-get -y update')
 os.system('sudo apt-get -y upgrade')
 
+# Habilitamos el FW y abrimos el puerto
 os.system('sudo ufw enable')
 os.system('sudo ufw allow '+str(port)+'/tcp')
-os.system('sudo ufw allow 9080/tcp')
 
 # Instalamos Python y pip
 #os.system('sudo apt-get -y install python3.8')
