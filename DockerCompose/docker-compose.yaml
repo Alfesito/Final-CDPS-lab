@@ -1,0 +1,35 @@
+version: '3'
+services:
+  productpage:
+    image: g40/productpage
+    container_name: g40-productpage
+    volumes:
+      - ./productpage:/app
+    ports:
+      - 8080:8080
+  details:
+    image: g40/details
+    container_name: g40-details
+    volumes:
+      - ./details:/app
+    environment:
+      - SERVICE_VERSION=v1
+      - ENABLE_EXTERNAL_BOOK_SERVICE=true
+    ports:
+      - 9080:9080
+  reviews:
+    image: g40/reviews:v1
+    container_name: g40-reviews
+    volumes:
+      - ./reviews:/app
+    environment:
+      - ENABLE_RATINGS=true
+    ports:
+      - 9080:9080
+  ratings:
+    image: g40/ratings
+    container_name: g40-ratings
+    volumes:
+      - ./ratings:/app
+    ports:
+      - 9080:9080
