@@ -21,17 +21,6 @@ services:
       - ENABLE_EXTERNAL_BOOK_SERVICE=true
     ports:
       - 9081:9080
-  reviews:
-    build:
-      context: ./Dockerfiles/Reviews/
-      dockerfile: Dockerfile.reviews
-    container_name: g40-reviews
-    volumes:
-      - ./reviews:/app
-    environment:
-      - ENABLE_RATINGS=true
-    ports:
-      - 9082:9080
   ratings:
     build:
       context: ./Dockerfiles/Ratings/
@@ -41,6 +30,17 @@ services:
       - ./ratings:/app
     ports:
       - 9083:9080
+  reviews:
+    build:
+      context: ./Dockerfiles/Reviews/reviews-wlpcfg
+      dockerfile: Dockerfile
+    container_name: g40-reviews
+    volumes:
+      - ./reviews:/app
+    environment:
+      - ENABLE_RATINGS=true
+    ports:
+      - 9082:9080
 
 # Para poder ejecutar este docker-compose hay que seguir los siguientes pasos:
 # 1. Crear las imagenes de cada uno de los servicios
