@@ -17,10 +17,10 @@ RUN pip3 install opentracing-instrumentation
 RUN pip3 install -r ./practica_creativa2/bookinfo/src/productpage/requirements.txt
 
 # Exponemos el puerto
-EXPOSE 8080
+EXPOSE 9080
 
 # Ejecutamos el archivo productpage.py al iniciar el contenedor
-CMD ["python", "./practica_creativa2/bookinfo/src/productpage/productpage.py", "8080"]
+CMD ["python3", "./practica_creativa2/bookinfo/src/productpage/productpage.py", "9080"]
 
 # Comando para construir la imagen de productpage:
     # $docker build -t g40/productpage .
