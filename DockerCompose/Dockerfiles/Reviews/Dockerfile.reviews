@@ -4,6 +4,9 @@ FROM openjdk:8-jdk-slim
 RUN mkdir -p /opt/microservices/reviews
 COPY ./reviews-wlpcfg/servers/LibertyProjectServer/apps/reviews-application-1.0.war /opt/microservices/reviews
 
+# Exponemos el puerto 9080
+EXPOSE 9080
+
 # Ejecutamos el fichero reviews.war al iniciar el contenedor
 CMD ["java", "-jar", "/opt/microservices/reviews/reviews-application-1.0.war"]
 

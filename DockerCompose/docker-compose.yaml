@@ -1,14 +1,18 @@
 version: '3'
 services:
   productpage:
-    image: g40/productpage
+    build:
+      context: ./Dockerfiles/ProductPage/
+      dockerfile: Dockerfile.productpage
     container_name: g40-productpage
     volumes:
       - ./productpage:/app
     ports:
       - 9080:9080
   details:
-    image: g40/details
+    build:
+      context: ./Dockerfiles/Details/
+      dockerfile: Dockerfile.details
     container_name: g40-details
     volumes:
       - ./details:/app
@@ -18,16 +22,20 @@ services:
     ports:
       - 9081:9080
   reviews:
-     image: g40/reviews:v1
-     container_name: g40-reviews
-     volumes:
-       - ./reviews:/app
-     environment:
-       - ENABLE_RATINGS=true
-     ports:
-       - 9082:9080
+    build:
+      context: ./Dockerfiles/Reviews/
+      dockerfile: Dockerfile.reviews
+    container_name: g40-reviews
+    volumes:
+      - ./reviews:/app
+    environment:
+      - ENABLE_RATINGS=true
+    ports:
+      - 9082:9080
   ratings:
-    image: g40/ratings
+    build:
+      context: ./Dockerfiles/Ratings/
+      dockerfile: Dockerfile.ratings
     container_name: g40-ratings
     volumes:
       - ./ratings:/app

@@ -15,7 +15,7 @@ RUN cd /opt/microservices/ratings && npm install
 EXPOSE 9080
 
 # Ejecutamos el fichero app.js al iniciar el contenedor
-CMD ["node", "/opt/microservices/ratings/ratings.js". "9080"]
+CMD ["node", "/opt/microservices/ratings/ratings.js", "9080"]
 
 # Comando para construir la imagen de ratings:
 # $ docker build -t g40/ratings .

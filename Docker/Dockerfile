@@ -5,9 +5,12 @@
 #   - Fernando Castell Miñón
 
 FROM python:3.8
+
 RUN apt-get update && apt-get install -y python3-pip git
+
 COPY . /app
 WORKDIR /app
+
 # Clonamos el repositorio
 RUN git clone https://github.com/CDPS-ETSIT/practica_creativa2
 # Cambiamos versiones que dan problemas en el requirements.txt
@@ -17,11 +20,14 @@ RUN pip3 install flask_bootstrap
 RUN pip3 install jaeger-client
 RUN pip3 install opentracing-instrumentation
 RUN pip3 install -r ./practica_creativa2/bookinfo/src/productpage/requirements.txt
+
 # Puerto que expone el servicio
 EXPOSE 9080
+
 # Variable de entorno GROUP_NUMBER
 ENV GROUP_NUMBER=40
 RUN sed -i "s/Simple Bookstore App/$GROUP_NUMBER/g" ./practica_creativa2/bookinfo/src/productpage/templates/productpage.html
+
 # Comando para ejecutar el servicio
 CMD ["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "9080"]
 
