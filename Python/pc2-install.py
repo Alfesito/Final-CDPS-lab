@@ -35,8 +35,9 @@ os.system('pip install jaeger-client')#
 os.system('pip install opentracing-instrumentation')#
 
 # Modificar el código de la aplicación para que en el título aparezca el nombre del grupo.
-os.environ['GROUP_NUMBER'] = 40
-group_number = os.environ['GROUP_NUMBER']
+#os.environ['GROUP_NUMBER'] = 40
+#group_number = os.environ['GROUP_NUMBER']
+group_number = 40
 # Para index.html
 with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "r") as f:
     code = f.read()
@@ -51,4 +52,4 @@ with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.h
     f.write(code)
 
 # Ejecutar la aplicación especificando el puerto deseado
-subprocess.check_call(["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", str(port)])
+subprocess.check_call(["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", str(port)],"&")
