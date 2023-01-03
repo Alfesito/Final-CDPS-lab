@@ -40,13 +40,13 @@ group_number = os.environ['GROUP_NUMBER']
 # Para index.html
 with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "r") as f:
     code = f.read()
-code = code.replace("Simple Bookstore App", group_number)
+code = code.replace("Simple Bookstore App", str(group_number))
 with open("./practica_creativa2/bookinfo/src/productpage/templates/index.html", "w") as f:
     f.write(code)
 # Para productpage.html
 with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "r") as f:
     code = f.read()
-code = code.replace("Simple Bookstore App", group_number)
+code = code.replace("Simple Bookstore App", str(group_number))
 with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "w") as f:
     f.write(code)
 
