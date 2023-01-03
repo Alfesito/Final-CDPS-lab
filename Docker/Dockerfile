@@ -25,7 +25,9 @@ RUN pip3 install -r ./practica_creativa2/bookinfo/src/productpage/requirements.t
 EXPOSE 9080
 
 # Variable de entorno GROUP_NUMBER
-ENV GROUP_NUMBER=40
+ARG group_number
+ENV GROUP_NUMBER ${group_number:-40}
+
 RUN sed -i "s/Simple Bookstore App/$GROUP_NUMBER/g" ./practica_creativa2/bookinfo/src/productpage/templates/productpage.html
 
 # Comando para ejecutar el servicio
@@ -34,7 +36,7 @@ CMD ["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monol
 # 1. Creamos la imagen:
     # $docker build -t g40/product-page .
 # 2. Arrancamos el contenedor con el puerto 9080
-    # $docker run -p 9080:9080 --name g40-product-page -d g40/product-page
+    # $docker run --name g40-product-page -p 9080:9080 -e GROUP_NUMBER=40 -d g40/product-page
 # 3. Abrimos el navegador: http://localhost:9080/productpage
 
 # Es importante tener en cuenta que, al utilizar un solo contenedor para todos los servicios, 

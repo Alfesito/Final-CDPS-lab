@@ -4,6 +4,7 @@ services:
     build:
       context: ./Dockerfiles/ProductPage/
       dockerfile: Dockerfile.productpage
+    image: g40/productpage
     container_name: g40-productpage
     volumes:
       - ./productpage:/app
@@ -13,6 +14,7 @@ services:
     build:
       context: ./Dockerfiles/Details/
       dockerfile: Dockerfile.details
+    image: g40/details
     container_name: g40-details
     volumes:
       - ./details:/app
@@ -25,6 +27,7 @@ services:
     build:
       context: ./Dockerfiles/Ratings/
       dockerfile: Dockerfile.ratings
+    image: g40/ratings
     container_name: g40-ratings
     volumes:
       - ./ratings:/app
@@ -34,14 +37,17 @@ services:
     build:
       context: ./Dockerfiles/Reviews/reviews-wlpcfg
       dockerfile: Dockerfile
+    image: g40/reviews:v1
     container_name: g40-reviews
     volumes:
       - ./reviews:/app
     environment:
-      - ENABLE_RATINGS=true
+      - SERVICE_VERSION=v1
+      - ENABLE_RATINGS=false
+      - STAR_COLOR=red
     ports:
       - 9082:9080
 
 # Para poder ejecutar este docker-compose hay que seguir los siguientes pasos:
 # 1. Crear las imagenes de cada uno de los servicios
-# 2. Ejecutar el comando: $docker-compose up -d
+# 2. Ejecutar el comando: $docker-compose up
