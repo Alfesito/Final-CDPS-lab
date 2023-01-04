@@ -52,4 +52,4 @@ with open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.h
     f.write(code)
 
 # Ejecutar la aplicación especificando el puerto deseado
-subprocess.check_call(["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", str(port)], "&")
+subprocess.check_call(["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", str(port)])
