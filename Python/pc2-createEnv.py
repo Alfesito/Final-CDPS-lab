@@ -104,7 +104,6 @@ def create():
         # Instala y ejecuta el repositorio de bookpage
         if i=="s1" or i=="s2" or i=="s3":
             fin1.write("sudo apt install git\n")
-            fin1.write("sudo apt install python3\n")
             fin1.write("git clone https://github.com/Alfesito/PC2.git\n")
             fin1.write("python3 ./PC2/pc2-install.py\n")
         fin1.close()

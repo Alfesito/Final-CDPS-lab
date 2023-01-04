@@ -29,10 +29,10 @@ os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2')
 # Instalar las dependencias especificadas en requirements.txt
 subprocess.check_call(["pip", "install", "-r", "./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
 # Instalamos las librerias que dan problemas de versiones
-os.system('pip install urllib3')#
-os.system('pip install flask_bootstrap')#
-os.system('pip install jaeger-client')#
-os.system('pip install opentracing-instrumentation')#
+os.system('pip install urllib3')
+os.system('pip install flask_bootstrap')
+os.system('pip install jaeger-client')
+os.system('pip install opentracing-instrumentation')
 
 # Modificar el código de la aplicación para que en el título aparezca el nombre del grupo.
 #os.environ['GROUP_NUMBER'] = 40
