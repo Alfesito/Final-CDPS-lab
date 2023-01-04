@@ -1,42 +1,42 @@
 ##################################################################################################
-# Ratings service
+# ProductPage service
 ##################################################################################################
-apiVersion: v1
+apiVersion: latest
 kind: Service
 metadata:
-  name: ratings
+  name: productpage
   labels:
-    app: ratings
-    service: ratings
+    app: productpage
+    service: productpage
 spec:
   ports:
   - port: 9080
     name: http
   selector:
-    app: ratings
+    app: productpage
 ---
-apiVersion: apps/v1
+apiVersion: apps/latest
 kind: Deployment
 metadata:
-  name: ratings-v1
+  name: productpage-latest
   labels:
-    app: ratings
-    version: v1
+    app: productpage
+    version: latest
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ratings
-      version: v1
+      app: productpage
+      version: latest
   template:
     metadata:
       labels:
-        app: ratings
-        version: v1
+        app: productpage
+        version: latest
     spec:
       containers:
-      - name: ratings
-        image: g40/ratings
+      - name: productpage
+        image: g40/productpage
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
