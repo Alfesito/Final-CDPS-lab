@@ -49,5 +49,6 @@ services:
       - 9082:9080
 
 # Para poder ejecutar este docker-compose hay que seguir los siguientes pasos:
-# 1. Crear las imagenes de cada uno de los servicios
+# 1. Crear los dockerfiles respectivos para usar sus imagenes de cada uno de los servicios
 # 2. Ejecutar el comando: $docker-compose up
+# 3. Abrimos el navegador: http://localhost:9080/productpage
