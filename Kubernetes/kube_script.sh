@@ -1,10 +1,3 @@
-# Para crear las imagenes con los Dockerfile (tarda más)
-docker build -t details -f ../DockerCompose/Dockerfiles/Details/Dockerfile.details .
-docker build -t productpage -f ../DockerCompose/Dockerfiles/Productpage/Dockerfile.productpage .
-docker build -t ratings -f ../DockerCompose/Dockerfiles/Ratings/Dockerfile.ratings .
-docker build -t reviews -f ../DockerCompose/Dockerfiles/Reviews/Dockerfile.reviews .
-
-
 # Instalamos las imagenes de docker hub
 docker pull alfesito/productpage
 docker pull alfesito/details
