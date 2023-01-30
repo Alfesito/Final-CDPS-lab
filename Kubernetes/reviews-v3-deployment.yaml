@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: reviews
   labels:
-    app: reviews-v3
+    app: reviews
     version: v3
 spec:
   replicas: 1
