@@ -10,4 +10,4 @@ EXPOSE 9080
 CMD ["ruby", "/opt/microservices/details.rb", "9080"]
 
 # Comando para construir la imagen de details:
-    # $ docker build -t g40/details .
+    # $ docker build -t details -f Dockerfile.details .

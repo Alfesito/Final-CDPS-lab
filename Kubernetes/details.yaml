@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: details
-        image: g40/details
+        image: alfesito/details:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080

@@ -4,9 +4,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reviews-v2
+  name: reviews
   labels:
-    app: reviews
+    app: reviews-v2
     version: v2
 spec:
   replicas: 1
@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: reviews
-        image: g40/reviews-v2
+        image: alfesito/reviews:v2
         imagePullPolicy: IfNotPresent
         env:
         - name: LOG_DIR
@@ -41,4 +41,3 @@ spec:
         emptyDir: {}
       - name: tmp
         emptyDir: {}
----

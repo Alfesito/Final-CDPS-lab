@@ -11,9 +11,9 @@ ARG service_version
 ARG enable_ratings
 ARG star_color
 ENV SERVICE_VERSION ${service_version:-v3}
-ENV ENABLE_RATINGS ${enable_ratings:-true}
-ENV STAR_COLOR ${star_color:-red}
+ENV ENABLE_RATINGS ${enable_ratings:-false}
+ENV STAR_COLOR ${star_color:-black}
 
 CMD ["/opt/ibm/wlp/bin/server", "run", "defaultServer"]
 
-# $docker build -t g40/reviews:v2 .
+# $ docker build -t reviews:v3 .

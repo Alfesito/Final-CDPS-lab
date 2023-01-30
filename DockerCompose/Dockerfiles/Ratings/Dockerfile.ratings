@@ -18,4 +18,4 @@ EXPOSE 9080
 CMD ["node", "/opt/microservices/ratings/ratings.js", "9080"]
 
 # Comando para construir la imagen de ratings:
-# $ docker build -t g40/ratings .
+# $ docker build -t ratings -f Dockerfile.ratings .

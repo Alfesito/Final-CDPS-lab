@@ -20,4 +20,4 @@ EXPOSE 9080
 CMD ["python3", "/practica_creativa2/bookinfo/src/productpage/productpage.py", "9080"]
 
 # Comando para construir la imagen de productpage:
-    # $docker build -t g40/productpage .
+    # $docker build -t productpage -f Dockerfile.productpage .
