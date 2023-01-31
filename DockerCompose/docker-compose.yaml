@@ -9,7 +9,7 @@ services:
     volumes:
       - ./productpage:/app
     ports:
-      - 80:9080
+      - 9080:9080
   details:
     build:
       context: ./Dockerfiles/Details/
