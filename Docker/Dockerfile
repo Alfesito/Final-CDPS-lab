@@ -35,8 +35,8 @@ CMD ["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monol
 
 # 1. Creamos la imagen:
     # $docker build -t g40/product-page .
-# 2. Arrancamos el contenedor con el puerto 9080
-    # $docker run --name g40-product-page -p 9080:9080 -e GROUP_NUMBER=40 -d g40/product-page
+# 2. Arrancamos el contenedor con el puerto 80
+    # $docker run --name g40-product-page -p 80:9080 -e GROUP_NUMBER=40 -d g40/product-page
 # 3. Abrimos el navegador: http://localhost:9080/productpage
 
 # Es importante tener en cuenta que, al utilizar un solo contenedor para todos los servicios, 
