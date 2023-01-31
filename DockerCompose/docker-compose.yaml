@@ -37,13 +37,13 @@ services:
     build:
       context: ./Dockerfiles/Reviews/reviews-wlpcfg
       dockerfile: Dockerfile
-    image: g40/reviews:v1
+    image: g40/reviews:v3
     container_name: g40-reviews
     volumes:
       - ./reviews:/app
     environment:
-      - SERVICE_VERSION=v1
-      - ENABLE_RATINGS=false
+      - SERVICE_VERSION=v3
+      - ENABLE_RATINGS=true
       - STAR_COLOR=red
     ports:
       - 9082:9080
