@@ -12,7 +12,7 @@ kubectl apply -f productpage.yaml
 kubectl apply -f details.yaml
 kubectl apply -f ratings.yaml
 kubectl apply -f reviews-svc.yaml
-kubectl delete deployment reviews
+kubectl delete deployment reviews >/dev/null
 if [[ $1 = v1 ]];
 then
   kubectl apply -f reviews-v1-deployment.yaml
